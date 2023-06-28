@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    "ribbit_app",
+    "tweet_app",
+    "login",
 ]
 
 MIDDLEWARE = [

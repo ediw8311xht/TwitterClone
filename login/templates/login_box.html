@@ -1,0 +1,46 @@
+{% extends "{{ extends_file }}" %}
+{% load static %}
+
+{% block login_box %}
+<div id="login_box">
+	<form method="post" action="{% url "login_view" %}">
+		{% csrf_token %}
+		<table>
+			<div>
+				<tr><label for="username">Username</label></tr>
+				<tr><input id="username" name="username" type="text" class="form-input"></input></tr>
+			</div>
+			<div>
+				<tr><label for="password">Password</label></tr>
+				<tr><input id="password" name="password" type="text" class="form-input"></input></tr>
+			</div>
+			<div>
+				<input type="submit" value="login">
+				<input type="hidden" name="next" value="{{ next }}">
+			</div>
+		</table>
+	</form>
+</div>
+{% endblock %}
+
+{% block registration_box %}
+<div id="login_box">
+	<form method="post" action="{% url "login_view" %}">
+		{% csrf_token %}
+		<table>
+			<div>
+				<tr><label for="username">Username</label></tr>
+				<tr><input id="username" name="username" type="text" class="form-input"></input></tr>
+			</div>
+			<div>
+				<tr><label for="password">Password</label></tr>
+				<tr><input id="password" name="password" type="text" class="form-input"></input></tr>
+			</div>
+			<div>
+				<input type="submit" value="login">
+				<input type="hidden" name="next" value="{{ next }}">
+			</div>
+		</table>
+	</form>
+</div>
+{% endblock %}

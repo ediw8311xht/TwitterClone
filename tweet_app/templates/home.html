@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Home</title>
+	</head>
+	<body>
+		{% block login %}{% endblock%}
+		{% for tweet in tweets %}
+			<p>{{ tweet.text }}: {{ tweet.author }}</p>
+			<p>{{ tweet.time }}</p>
+		{% endfor %}
+	</body>
+</html>

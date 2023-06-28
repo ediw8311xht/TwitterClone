@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> llllooogggiiinnn </title>
+	</head>
+	<body>
+		<div id="login_box">
+			<form method="post" action="{% url "login_view" %}">
+				{% csrf_token %}
+				<table>
+					<div>
+						<tr><label for="username">Username</label></tr>
+						<tr><input id="username" name="username" type="text" class="form-input"></input></tr>
+					</div>
+					<div>
+						<tr><label for="password">Password</label></tr>
+						<tr><input id="password" name="password" type="text" class="form-input"></input></tr>
+					</div>
+					<div>
+						<input type="submit" value="login">
+						<input type="hidden" name="next" value="{{ next }}">
+					</div>
+				</table>
+			</form>
+		</div>
+	</body>
+</html>

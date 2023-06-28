@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>New Tweet</title>
+	</head>
+	<body>
+		<form method="post" action="/tweet/">
+			{% csrf_token %}
+			<input id="new_tweet" name="new_tweet" type="text"></input>
+		</form>
+	</body>
+</html>
